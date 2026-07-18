@@ -123,6 +123,7 @@
 </style>
 </head>
 <body class="antialiased">
+<main>
 
 <!-- HERO -->
 <section class="relative overflow-hidden pt-10 pb-24 md:pt-14 md:pb-32 grain">
@@ -211,7 +212,7 @@
       <!-- JRT Card -->
       <a href="https://www.jrthandyman.com/" target="_blank" rel="noopener noreferrer" class="card rounded-2xl overflow-hidden block group">
         <div class="aspect-[16/10] overflow-hidden border-b border-white/10">
-          <img src="jrsclient.png" alt="JRT Handyman website redesign" loading="lazy" decoding="async" class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105" />
+          <img src="jrsclient.jpg" alt="JRT Handyman website redesign" loading="lazy" decoding="async" class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105" />
         </div>
         <div class="p-6">
           <p class="font-semibold text-lg mb-1 group-hover:text-[#C48FE0] transition-colors">JRT Handyman &amp; Home Services</p>
@@ -222,7 +223,7 @@
       <!-- VVS Card -->
       <a href="https://www.vitalvendingsales.com/" target="_blank" rel="noopener noreferrer" class="card rounded-2xl overflow-hidden block group">
         <div class="aspect-[16/10] overflow-hidden border-b border-white/10">
-          <img src="vvsclient.png" alt="Vital Vending Sales website redesign" loading="lazy" decoding="async" class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105" />
+          <img src="vvsclient.jpg" alt="Vital Vending Sales website redesign" loading="lazy" decoding="async" class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105" />
         </div>
         <div class="p-6">
           <p class="font-semibold text-lg mb-1 group-hover:text-[#C48FE0] transition-colors">Vital Vending Sales</p>
@@ -233,7 +234,7 @@
       <!-- TRL Card -->
       <a href="https://www.therealitylabs.com/" target="_blank" rel="noopener noreferrer" class="card rounded-2xl overflow-hidden block group">
         <div class="aspect-[16/10] overflow-hidden border-b border-white/10">
-          <img src="trlExample.png" alt="The Reality Labs website redesign" loading="lazy" decoding="async" class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105" />
+          <img src="trlExample.jpg" alt="The Reality Labs website redesign" loading="lazy" decoding="async" class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105" />
         </div>
         <div class="p-6">
           <p class="font-semibold text-lg mb-1 group-hover:text-[#C48FE0] transition-colors">The Reality Labs</p>
@@ -325,7 +326,7 @@
         </div>
         <p class="text-white/80 mb-8">&ldquo;The execution was seamless and extremely professional.&rdquo;</p>
         <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-white border border-white/10 overflow-hidden flex items-center justify-center"><img src="ccpic.png" alt="Carrie's Creations" loading="lazy" decoding="async" class="w-full h-full object-cover" /></div>
+          <div class="w-10 h-10 rounded-full bg-white border border-white/10 overflow-hidden flex items-center justify-center"><img src="ccpic-sm.jpg" alt="Carrie's Creations" loading="lazy" decoding="async" class="w-full h-full object-cover" /></div>
           <div>
             <p class="text-sm font-semibold">Carrie's Creations</p>
             <p class="text-xs text-white/40">Charlotte, NC</p>
@@ -361,7 +362,7 @@
   <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-[420px_1fr] gap-10 md:gap-14 items-stretch">
     <div class="mx-auto md:mx-0 w-full">
       <div class="relative rounded-2xl overflow-hidden border border-white/10 w-full h-full min-h-[420px]">
-        <img src="jacket-profpic.JPG" alt="Carter Dombeck, founder of CeeJay Social" loading="lazy" decoding="async" class="w-full h-full object-cover" />
+        <img src="carter-photo.jpg" alt="Carter Dombeck, founder of CeeJay Social" loading="lazy" decoding="async" class="w-full h-full object-cover" />
         <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
       </div>
     </div>
@@ -409,11 +410,30 @@
     <p class="text-white/55 max-w-xl mx-auto mb-10">Book a free strategy call. We&rsquo;ll talk through your goals, your current site, and what a partnership with CeeJay Social could look like.</p>
 
     <div class="card-elevated rounded-2xl p-4 md:p-6 max-w-2xl mx-auto">
-      <div class="calendly-inline-widget" data-url="https://calendly.com/ceejaydeesocial/30min" style="min-width:320px;height:700px;"></div>
+      <div id="calendly-container" class="min-h-[700px] flex items-center justify-center">
+        <button id="calendly-load-btn" type="button" class="btn-primary rounded-full px-10 py-4 font-semibold text-base">Show Available Times</button>
+      </div>
     </div>
   </div>
 </section>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</main>
+<script>
+  document.getElementById('calendly-load-btn').addEventListener('click', function () {
+    var container = document.getElementById('calendly-container');
+    container.innerHTML = '';
+    container.className = '';
+    var widget = document.createElement('div');
+    widget.className = 'calendly-inline-widget';
+    widget.setAttribute('data-url', 'https://calendly.com/ceejaydeesocial/30min');
+    widget.style.minWidth = '320px';
+    widget.style.height = '700px';
+    container.appendChild(widget);
+    var script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+  });
+</script>
 
 </body>
 </html>

@@ -6,3 +6,7 @@ LDlogo.png
 BrandKitCeeJaySocial(1).txt
 CLAUDE.md
 serve.mjs
+node_modules/
+package.json
+package-lock.json
+*.pdf
