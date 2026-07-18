@@ -19,8 +19,13 @@
 <link rel="apple-touch-icon" href="CJSOfficialCloud.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fast.wistia.com">
+<link rel="preconnect" href="https://fast.wistia.net" crossorigin>
+<link rel="preconnect" href="https://embed-ssl.wistia.com" crossorigin>
 <link rel="stylesheet" href="styles.css">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700;800&display=swap" as="style">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
 <script src="https://fast.wistia.com/player.js" async></script>
 <script src="https://fast.wistia.com/embed/a77jqebrr3.js" async type="module"></script>
 </head>
@@ -69,7 +74,7 @@
       <span class="text-white/50">5.0 out of 5</span>
     </div>
 
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 min-h-[132px] sm:min-h-0">
       <a href="#book" class="btn-primary rounded-full px-10 py-4 font-semibold text-base w-full sm:w-auto">Get Started</a>
       <a href="#results" class="btn-ghost rounded-full px-10 py-4 font-semibold text-base w-full sm:w-auto">See Our Results</a>
     </div>
