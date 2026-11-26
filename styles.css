@@ -31,3 +31,4 @@ p, li, span.body{ line-height:1.7; }
 .marquee-track{animation: scroll-left 28s linear infinite;}
 @keyframes scroll-left{from{ transform: translateX(0); }to{ transform: translateX(-50%); }}
 wistia-player[media-id='a77jqebrr3']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/a77jqebrr3/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }
+@media (width>=48rem){.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}
